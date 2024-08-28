@@ -1,0 +1,416 @@
+@import url('https://fonts.cdnfonts.com/css/fantasy');
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';font-size: 17px;
+    color: black;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: rgb(240, 240, 240);
+}
+
+.container, .slide{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.slide{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.slide.first{
+  background-color: white;
+}
+
+.band-container{
+    width: 100%;
+}
+
+.band-container .band {
+    background-image: linear-gradient(orange, orange);
+    height: 13px;
+    margin-bottom: 7px;
+  }
+
+  .band:nth-child(1) {
+    width: 100%;
+  }
+  
+  .band:nth-child(2) {
+    width: 75%;
+    border-radius: 0 13px 13px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .band:nth-child(3) {
+    width: 50%;
+    border-radius: 0 13px 13px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .band-container.flipped {
+    transform: rotate(180deg);
+    transform-origin: center;
+  }
+
+  .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px;
+  }
+
+  .mirror-container{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .mirror-container .about-me{
+    border-right: 2px black solid;
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .actions-conatiner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
+  }
+  .actions-conatiner button{
+    border: solid 2px orange;
+    color: black;
+    width: 200px;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  .card{
+    margin: 20px 30px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+
+  span.title{
+    display: block;
+    align-self: center;
+    text-align: center;
+    font-style: italic;
+  }
+  .content p{
+    text-align: justify;
+    margin: 15px;
+  }
+
+  .animation-container{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .animation-container img{
+    margin-left: 20px;
+    width: 180px;
+  }
+ 
+.services-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  width: 90%;
+}
+
+.services-container .service-card{
+  min-width: 250px;
+  width: 250px;
+  height: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 20px;
+}
+
+.services-container .service-card .image-service-container{
+  width: 100%;
+  height: 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.services-container .service-card button{
+  border: solid 2px orange;
+  background-color: transparent;
+  transition: 0.3s;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.services-container .service-card button:hover{
+  color: darkorange;
+}
+
+#electricity-service{
+  background-image: url('electricite.jpeg');
+}
+
+#fibre-service{
+  background-image: url('fibre.jpg');
+}
+
+#panneaux-service{
+  background-image: url('panneaux-solaires.jpeg');
+}
+
+.footer{
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .copy-rights{
+   min-width: 200px; 
+   text-align: center;
+}
+.footer p{
+  color: orange !important;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.footer .line{
+  width: 100%;
+  height: 5px;
+  background-color: orange;
+}
+
+.popup{
+  position: fixed;
+  top: 50%;
+  left: 48%;
+  width: 96%;
+  height: 0%;
+  transform: translate(-48%, -50%);
+  background-color:white;
+  overflow: auto;
+  z-index: 20;
+  border-radius: 3px;
+  box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.318);
+}
+.popup::-webkit-scrollbar{
+  width: 5px;
+}
+
+.popup::-webkit-scrollbar-thumb {
+  background:orange;
+}
+
+.popup .popup-content {
+  padding: 20px 10px;
+  width: 100%;
+  max-width: 95%;
+  margin: 0 auto;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup .popup-content .popup-close-btn{
+  position: absolute;
+  top: 17.7px;
+  right: 35px;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  align-items: center;
+  line-height: 30px;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+  color: black;
+}
+
+.popup.active{
+  animation: popupAnimationOpen 1000ms ease-in-out forwards;
+}
+
+.popup.inactive{
+  animation: popupAnimationClose 1000ms ease-in-out forwards;
+}
+
+.popup.inactive .popup-content{
+  opacity: 0;
+  transform: all 300ms ease-in-out 1000ms;
+}
+.popup.active .popup-content{
+  opacity: 1;
+  transform: all 300ms ease-in-out 1000ms;
+}
+
+@keyframes popupAnimationOpen{
+  0% {
+    width: 0%;
+    height: 0%;
+  }
+  40% {
+    width: 96%;
+    height: 2px;
+  }
+  100% {
+    width: 96%;
+    height: 96%;
+  }
+}
+@keyframes popupAnimationClose{
+  0% {
+    width: 96%;
+    height: 96%;
+  }
+  40% {
+    width: 96%;
+    height: 2px;
+  }
+  100% {
+    width: 0%;
+    height: 0%;
+  }
+}
+
+.form-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 17px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.form-group input[type="date"] {
+  padding: 8px;
+}
+
+.form-group button {
+  background-color: orange;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  padding: 10px;
+  margin-top: 11px;
+  width: 100%;
+}
+
+.form-group button:hover {
+  background-color: orangered;
+}
+
+.form-container p{
+  color: #333;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 800px) {
+  .mirror-container{
+    flex-direction: column;
+  }
+  .mirror-container .about-me{
+    border-right: transparent;
+  }
+  .animation-container{
+    width: 100%;
+  }
+  .popup{
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
+
+  @keyframes popupAnimationOpen{
+    0% {
+      width: 0%;
+      height: 0%;
+    }
+    40% {
+      width: 100%;
+      height: 2px;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  @keyframes popupAnimationClose{
+    0% {
+      width: 100%;
+      height: 100%;
+    }
+    40% {
+      width: 100%;
+      height: 2px;
+    }
+    100% {
+      width: 0%;
+      height: 0%;
+    }
+  }
+
+  .popup .popup-content .popup-close-btn{
+    right: 20px;
+  }
+}
